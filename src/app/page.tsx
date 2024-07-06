@@ -1,7 +1,60 @@
+"use client"
+
+import Header from "@/components/header";
+import Image from "next/image";
+import BackArrow from '../assets/left_arrow.png'
+import Share from '../assets/share.png'
+import Heart from '../assets/heart.png'
+import Gallery from '../assets/gallert.png'
+import Sidebar from "@/components/sidebar";
+import Verified from '../assets/verified.png'
+
 export default function Home() {
+
+  const sidebarItems = [
+    { label: 'Best Matches', href: '#best-matches' },
+    { label: 'Menu', href: '#menu' },
+    { label: 'Dietary Info', href: '#dietary-info' },
+    { label: 'Reviews', href: '#reviews' },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-     <h1>Welcome</h1>
+    <main className="mx-auto">
+    
+    <Header/>
+
+    <div className="image-display h-64 bg-[url('../assets/bg_image.png')] relative bg-center bg-cover">
+      <Image src={BackArrow} alt="Go Back" className="bg-white p-1 rounded-full absolute top-10 left-16 w-8 h-8 object-contain"/> 
+      <Image src={Heart} alt="Heart" className="bg-white p-1 rounded-full absolute top-10 right-36 w-8 h-8 object-contain"/> 
+      <Image src={Share} alt="Share" className="bg-white p-1 rounded-full absolute top-10 right-48 w-8 h-8 object-contain"/> 
+      <button className="absolute bottom-10 right-36 w-36 h-10 bg-white rounded-md p-2 flex flex-row text-xs text-pinkHero font-medium text-center items-center justify-center">
+        <Image src={Gallery} alt="Gallery" className="mr-1"/>
+        All (45) photos
+      </button>
+    </div>
+
+    <Sidebar items={sidebarItems}/>
+    
+    <div className="content ml-52 bg-slate-500 h-screen p-8 px-9 relative">
+      <div className="content-header-container  mb-6 p-2 bg-violet-600">
+        <div className="text-2xl font-semibold mb-5 flex gap-5">The Daily Grind
+          <Image src={Verified} alt="verification logo" className="size-8"></Image>
+        </div>
+
+        <div className="subtext">1.2 miles Away
+          | <span className="text-greenOpen font-semibold"> Open </span>
+        </div>
+      </div>
+
+        <div className="add-menu-section justify-end">
+          Add Item
+        </div>
+
+      </div>
+
+    
+
     </main>
+  
   );
 }
