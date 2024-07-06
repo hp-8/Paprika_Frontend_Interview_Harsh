@@ -1,13 +1,9 @@
 "use client"
 
-import Header from "@/components/header";
-import Image from "next/image";
-import BackArrow from '../assets/left_arrow.png'
-import Share from '../assets/share.png'
-import Heart from '../assets/heart.png'
-import Gallery from '../assets/gallert.png'
-import Sidebar from "@/components/sidebar";
-import Verified from '../assets/verified.png'
+import Header from "@/util/header";
+import Sidebar from "@/util/sidebar";
+import Content from "@/components/contentSection";
+import ImageSection from "@/components/imageSection";
 
 export default function Home() {
 
@@ -22,35 +18,10 @@ export default function Home() {
     <main className="mx-auto">
     
     <Header/>
-
-    <div className="image-display h-64 bg-[url('../assets/bg_image.png')] relative bg-center bg-cover">
-      <Image src={BackArrow} alt="Go Back" className="bg-white p-1 rounded-full absolute top-10 left-16 w-8 h-8 object-contain"/> 
-      <Image src={Heart} alt="Heart" className="bg-white p-1 rounded-full absolute top-10 right-36 w-8 h-8 object-contain"/> 
-      <Image src={Share} alt="Share" className="bg-white p-1 rounded-full absolute top-10 right-48 w-8 h-8 object-contain"/> 
-      <button className="absolute bottom-10 right-36 w-36 h-10 bg-white rounded-md p-2 flex flex-row text-xs text-pinkHero font-medium text-center items-center justify-center">
-        <Image src={Gallery} alt="Gallery" className="mr-1"/>
-        All (45) photos
-      </button>
-    </div>
-
+    <ImageSection/>
     <Sidebar items={sidebarItems}/>
+    <Content/>
     
-    <div className="content ml-52 bg-slate-500 h-screen p-8 px-9 relative">
-      <div className="content-header-container  mb-6 p-2 bg-violet-600">
-        <div className="text-2xl font-semibold mb-5 flex gap-5">The Daily Grind
-          <Image src={Verified} alt="verification logo" className="size-8"></Image>
-        </div>
-
-        <div className="subtext">1.2 miles Away
-          | <span className="text-greenOpen font-semibold"> Open </span>
-        </div>
-      </div>
-
-        <div className="add-menu-section justify-end">
-          Add Item
-        </div>
-
-      </div>
 
     
 
