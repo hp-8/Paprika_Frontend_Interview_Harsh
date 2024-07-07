@@ -12,12 +12,12 @@ interface sidebarProps {
 
 const Sidebar: React.FC<sidebarProps> = ({ items }) => {
   return (
-    <div className="sidebar m-0 p-0 w-52 bg-blue-200 fixed h-screen overflow-auto">
+    <div className="sidebar m-0 py-7 w-56 sticky h-screen overflow-y-auto ">
       {items.map((item, index) => (
         <a
           key={index}
           href={item.href}
-          className="block py-4 px-7 text-black hover:bg-pinkHero font-semibold text-sm">
+          className="block py-4 px-7 text-black hover:bg-pinkHero hover:bg-opacity-50 font-semibold text-sm transition-colors duration-200">
           {item.label}
         </a>
       ))}
