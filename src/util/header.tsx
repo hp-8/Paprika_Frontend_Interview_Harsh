@@ -56,10 +56,10 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center space-x-2 order-2 md:order-3">
-          <button className="text-pinkHero text-xs md:text-sm font-bold px-4 py-2 rounded-lg">
+          <button className="btn text-pinkHero text-xs md:text-base font-bold px-4 py-2 rounded-lg">
             Sign Up
           </button>
-          <button className="text-pinkHero text-xs md:text-sm font-bold bg-pinkHero bg-opacity-20 antialiased rounded-full px-4 py-2">
+          <button className="btn text-pinkHero text-xs md:text-base font-bold bg-pinkHero bg-opacity-20 antialiased rounded-full px-4 py-2">
             Log In
           </button>
         </div>

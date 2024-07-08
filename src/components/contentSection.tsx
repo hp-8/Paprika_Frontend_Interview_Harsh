@@ -100,7 +100,7 @@ function Content() {
           
           <div className="icon flex-shrink-0 w-8 sm:w-8 md:w-8">
             <Image
-              src={HumanIcon}
+              src={HumanIcon} 
               alt="Human Icon"
               className="h-auto max-w-full"
             />
