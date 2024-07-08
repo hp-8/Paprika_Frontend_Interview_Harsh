@@ -17,8 +17,8 @@ export default function Home() {
     <main className="mx-auto">
       <Header />
       <ImageSection />
-      <div className="flex mx-4">
-        <div className="w-52 flex-shrink-0">
+      <div className="flex flex-col md:flex-row mx-4">
+        <div className="md:w-52 w-full md:flex-shrink-0 mb-4 md:mb-0">
           <Sidebar items={sidebarItems} />
         </div>
         <div className="flex-grow">
